@@ -1,10 +1,15 @@
 import React from 'react';
 import './App.css';
+import {BrowserRouter as Router,Route,Link} from 'react-router-dom'
 import { Home, About, Contact, Navigation } from './components';
 
 const App = () => (
   <div>
-    <Navigation />
+    <Navigation  />
+
+    <Route exact path = '/' component ={Home} />
+    <Route path = '/About' component = {About} />
+    <Route path = '/Contact' component = {Contact} />
   </div>
 );
 
